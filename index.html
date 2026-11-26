@@ -86,7 +86,7 @@ body{background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--ink);f
 </g>
 </g>
 </svg></div>
-  <p id="msg">Угощайся: нажми на палочку 🍫</p>
+  <p id="msg">Приятного аппетита,нажми на палочку 🍫</p>
 </div>
 <canvas id="c"></canvas>
 <script>
@@ -136,7 +136,7 @@ e.innerHTML=((r+c)%2==0)?HEART:CARROT;
 d.appendChild(e);k++}
 })();
 document.getElementById("pep").classList.add("x");
-var bites=0,wishes=["Яя очень тебя люблю 💗","Слаще этого поки только ты! 🍬","Ты великолепная ! 🥰","Рядом с тобой каждый день как праздник ! 🎉","Маркуша, ты моё счастье 💌"];
+var bites=0,wishes=["Яя очень тебя люблю 💗","Слаще этого поки только ты! 🍬","Ты великолепная ! 🥰","Рядом с тобой каждый день как праздник ! 🎉","Маркоша, ты моё счастье 💌"];
 var stick=document.getElementById("stick"),msg=document.getElementById("msg"),bitePath=document.getElementById("bitePath");
 var BX=[0,46,92,138,184,236],BJ=[];
 for(var q=0;q<BX.length;q++){BJ.push([0,1,2,3].map(function(){return Math.random()*6-3}))}
@@ -152,7 +152,7 @@ function crumbs(x,y,n){for(var i=0;i<n;i++){var s=1+Math.random()*3.5,a=Math.ran
 parts.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-2.5,w:2.5+Math.random()*3.5,h:2.5+Math.random()*3.5,r:Math.random()*6,vr:Math.random()*.5-.25,c:crumbCols[i%crumbCols.length]})}}
 stick.onclick=function(){
 bites++;
-if(bites>5){bites=0;setClip(0,BJ[0]);msg.textContent="Ещё одну? Нажимай снова 🍫";
+if(bites>5){bites=0;setClip(0,BJ[0]);msg.textContent="Хочешь ещё? угощайся! 🍫";
 stick.classList.remove("pop");void stick.offsetWidth;stick.classList.add("pop");return}
 biteTo(bites);
 msg.textContent=wishes[bites-1];
